@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    Fill the form to submit a book entry
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    {% if form.errors %}
+    <p>
+      Please correct the error{{form.errors|pluralize}} below.
+    </p>
+    {% endif %}
+    <form class="" action="" method="post" novalidate>
+      <table>
+        {{ form.as_table }}
+      </table>
+      {% csrf_token %}
+      <input type="submit" name="" value="Submit">
+    </form>
+  </body>
+</html>
